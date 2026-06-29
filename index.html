@@ -49,6 +49,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 10px;
 
       padding: 16px 32px;
 
@@ -64,7 +65,10 @@
       line-height: 200%;
       text-decoration: none;
 
-      transition: background-color 0.25s ease, color 0.25s ease;
+      transition:
+        background-color .25s ease,
+        color .25s ease;
+
       cursor: pointer;
     }
 
@@ -72,6 +76,36 @@
       background: #000000;
       color: #FFFFFF;
     }
+
+    .icon-wrapper {
+      width: 24px;
+      height: 24px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 50%;
+      transition: background-color .25s ease;
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      transition:
+        transform .25s ease,
+        color .25s ease;
+    }
+
+    .cv-button:hover .icon-wrapper {
+      background: #FFFFFF;
+    }
+
+    .cv-button:hover .icon {
+      color: #000000;
+      transform: translateY(2px);
+    }
+
   </style>
 </head>
 
@@ -88,7 +122,27 @@
       href="KayleighMariaGonzalez_CV_EN_2026.pdf"
       download
     >
-      Resume
+      <span>Resume</span>
+
+      <span class="icon-wrapper">
+
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.4"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+
+          <path d="M12 5v11"></path>
+          <path d="M7 13l5 5 5-5"></path>
+
+        </svg>
+
+      </span>
+
     </a>
 
   </main>
