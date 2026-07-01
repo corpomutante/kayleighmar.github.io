@@ -10,142 +10,163 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: #FFFFFF;
-      font-family: "DM Sans", sans-serif;
-      color: #000000;
+    body{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      background:#FFFFFF;
+      font-family:"DM Sans",sans-serif;
+      color:#000;
     }
 
-    .container {
-      width: 360px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+    .container{
+      width:360px;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
     }
 
-    .title {
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 120%;
-      letter-spacing: -0.04em;
-      text-align: left;
-      margin-bottom: 32px;
+    .title{
+      font-size:32px;
+      font-weight:700;
+      line-height:120%;
+      letter-spacing:-0.04em;
+      margin-bottom:32px;
     }
 
-    .cv-button {
-      width: 168px;
-      height: 56px;
+    .cv-button{
+      height:56px;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:8px;
 
-      padding: 16px 32px;
+      padding:16px 32px;
 
-      border-radius: 500px;
-      border: none;
+      border-radius:500px;
 
-      background: #E2F505;
-      color: #000000;
+      background:#E2F505;
+      color:#000;
 
-      font-family: "DM Sans", sans-serif;
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 200%;
-      text-decoration: none;
+      text-decoration:none;
+
+      font-family:"DM Sans",sans-serif;
+      font-size:18px;
+      font-weight:500;
+      line-height:200%;
 
       transition:
-        background-color .25s ease,
+        background .25s ease,
         color .25s ease;
 
-      cursor: pointer;
+      user-select:none;
+      -webkit-user-select:none;
     }
 
-    .cv-button:hover {
-      background: #000000;
-      color: #FFFFFF;
+    .icon-circle{
+
+      width:24px;
+      height:24px;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      border-radius:50%;
+
+      transition:background .2s ease;
     }
 
-    .icon-wrapper {
-      width: 24px;
-      height: 24px;
+    .icon{
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width:24px;
+      height:24px;
 
-      border-radius: 50%;
-      transition: background-color .25s ease;
-    }
+      transform:rotate(135deg);
 
-    .icon {
-      width: 16px;
-      height: 16px;
       transition:
-        transform .25s ease,
-        color .25s ease;
+        color .2s ease,
+        transform .2s ease;
     }
 
-    .cv-button:hover .icon-wrapper {
-      background: #FFFFFF;
+    .icon svg{
+      width:24px;
+      height:24px;
+      display:block;
+      stroke:currentColor;
     }
 
-    .cv-button:hover .icon {
-      color: #000000;
-      transform: translateY(2px);
+    .cv-button:hover{
+
+      background:#E2F505;
+      color:#000;
+
+    }
+
+    .cv-button:hover .icon-circle{
+
+      background:#FFFFFF;
+
+    }
+
+    .cv-button:active{
+
+      background:#000;
+      color:#FFF;
+
+    }
+
+    .cv-button:active .icon-circle{
+
+      background:transparent;
+
     }
 
   </style>
+
 </head>
 
 <body>
 
-  <main class="container">
+<main class="container">
 
-    <h1 class="title">
-      Download my resume in English.
-    </h1>
+<h1 class="title">
+Download my resume in English.
+</h1>
 
-    <a
-      class="cv-button"
-      href="KayleighMariaGonzalez_CV_EN_2026.pdf"
-      download
-    >
-      <span>Resume</span>
+<a
+class="cv-button"
+href="KayleighMariaGonzalez_CV_EN_2026.pdf"
+download>
 
-      <span class="icon-wrapper">
+<span>Resume</span>
 
-        <svg
-          class="icon"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.4"
-          stroke-linecap="round"
-          stroke-linejoin="round">
+<span class="icon-circle">
 
-          <path d="M12 5v11"></path>
-          <path d="M7 13l5 5 5-5"></path>
+<span class="icon">
 
-        </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+<path d="M7.61914 17.2699L17.5186 7.3704" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.519 15.8556V7.37027" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.0332 7.37024H17.5185" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 
-      </span>
+</span>
 
-    </a>
+</span>
 
-  </main>
+</a>
+
+</main>
 
 </body>
 </html>
